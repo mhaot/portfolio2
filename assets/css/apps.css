@@ -1,0 +1,47 @@
+/* base*/
+@import './base/reset.css';
+@import './base/base.css';
+
+/* components */
+/* @import './components/common.css';
+@import './components/utility.css'; */
+
+/* Layout */
+/* @import './layout/header.css';
+@import './layout/main.css';
+@import './layout/carousel.css';
+@import './layout/products.css';
+@import './layout/about.css';
+@import './layout/news.css';
+@import './layout/storesSectionOnline.css';
+@import './layout/memberShip.css';
+@import './layout/instagram.css';
+@import './layout/footer.css'; */
+
+/* @import url('/portfolio/assets/css/layout/_footer.css'); github pagesで公開する場合 */
+/* /assets/
+├── /css/
+│   ├── /base/
+│   │   ├── _reset.css
+│   │   └── _base.css
+│   ├── /layout/
+│   │   ├── _header.css
+│   │   ├── _main.css
+│   │   ├── _carousel.css
+│   │   ├── _product.css
+│   │   ├── _about.css
+│   │   ├── _news.css
+│   │   ├── _stores-section-online.css
+│   │   ├── _memberships.css
+│   │   ├── _instagram.css
+│   │   └── _footer.css
+│   ├── /components/
+│   │   ├── _common.css
+│   │   └── _utility.css
+│   └── apps.css
+├── /images/
+├── /js/
+│   ├── carousel.js
+│   ├── header.js
+│   └── apps.js
+└── index.html */
