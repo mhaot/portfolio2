@@ -1,0 +1,108 @@
+
+@media screen and (max-width: 768px) {
+
+.l-header {
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    float: none;
+    width: 100%;
+    background: #fff;
+}
+
+.l-header__inner {
+    position: static;
+    width: 100%;
+    min-width: 0;
+    min-height: 0;
+    transition: min-width .3s, min-height .3s;
+    background: #fff;
+}
+
+.l-header__nav {
+    position: absolute;
+    top: 20px;
+    right: 16px;
+}
+.l-header__nav a {
+    top: 20px;
+    right: 14px;
+    position: relative;
+    display: inline-block;
+    box-sizing: border-box;
+    transition: all .4s;
+}
+
+.l-header__nav  > a:before {
+    top: 0;
+    content: '';
+}
+.l-header__nav  > a:after {
+    bottom: 0;
+    content: '';
+}
+
+.l-header__nav  > a span {
+    top: 6px;
+}
+.l-header__nav  > a span, .l-header__nav > a:after, .l-header__nav > a:before {
+    top: 0;
+    position: absolute;
+    left: 0;
+    display: inline-block;
+    box-sizing: border-box;
+    width: 100%;
+    height: 1px;
+    transition: all .4s;
+    border-radius: 2px;
+    background-color: #424242;
+}
+
+
+.l-header__language {
+    top: 0;
+    bottom: 0;
+    left: 16px;
+    width: auto;
+    height: 56px;
+    padding: 0;
+    border: none;
+    font-size: 1.3rem;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+}
+
+.l-header__languageSelect {
+    color: #757575;
+}
+
+.l-header__language > span {
+margin: 0 10px;
+}
+
+.l-header__language > a {
+    text-decoration: none;
+    color: #212121;
+}
+
+.l-header__logo {
+    position: static;
+    top: 0;
+    margin: 0;
+    padding: 9px 0;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.l-header__logo {
+    display: block;
+    overflow: hidden;
+    width: 39px;
+    height: 0;
+    margin: 0 auto;
+    padding-top: 37px;
+    background-image: url(shared/img/sprite.png);
+    background-position: 0 -523px;
+    background-size: 151px 729px;
+}
+}

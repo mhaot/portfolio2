@@ -1,6 +1,8 @@
 /* base*/
 @import './base/reset.css';
 @import './base/base.css';
+@import './layout/body.css';
+
 
 /* components */
 /* @import './components/common.css';
