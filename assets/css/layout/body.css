@@ -23,6 +23,14 @@
     position: absolute;
     top: 20px;
     right: 16px;
+    position: static;
+    height: auto;
+    min-height: 0;
+    padding: 0;
+}
+
+.l-header__nav span {
+    top: 6px;
 }
 .l-header__nav a {
     top: 20px;
@@ -69,8 +77,11 @@
     border: none;
     font-size: 1.3rem;
     position: absolute;
+    display: flex;
+    text-align: center;
     align-items: center;
     justify-content: center;
+
 }
 
 .l-header__languageSelect {
@@ -95,14 +106,12 @@ margin: 0 10px;
 }
 
 .l-header__logo {
-    display: block;
-    overflow: hidden;
-    width: 39px;
-    height: 0;
-    margin: 0 auto;
-    padding-top: 37px;
-    background-image: url(shared/img/sprite.png);
-    background-position: 0 -523px;
+    position: static;
+    top: 0;
+    margin: 0;
+    padding: 9px 0;
+    border-bottom: 1px solid #e5e5e5;
     background-size: 151px 729px;
 }
+
 }
