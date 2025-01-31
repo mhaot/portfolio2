@@ -1,5 +1,5 @@
 
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
 
 .l-header {
     position: fixed;
@@ -19,55 +19,10 @@
     background: #fff;
 }
 
-.l-header__nav {
-    position: absolute;
-    top: 20px;
-    right: 16px;
-    position: static;
-    height: auto;
-    min-height: 0;
-    padding: 0;
-}
 
-.l-header__nav span {
-    top: 6px;
-}
-.l-header__nav a {
-    top: 20px;
-    right: 14px;
-    position: relative;
-    display: inline-block;
-    box-sizing: border-box;
-    transition: all .4s;
-}
-
-.l-header__nav  > a:before {
-    top: 0;
-    content: '';
-}
-.l-header__nav  > a:after {
-    bottom: 0;
-    content: '';
-}
-
-.l-header__nav  > a span {
-    top: 6px;
-}
-.l-header__nav  > a span, .l-header__nav > a:after, .l-header__nav > a:before {
-    top: 0;
-    position: absolute;
-    left: 0;
-    display: inline-block;
-    box-sizing: border-box;
-    width: 100%;
-    height: 1px;
-    transition: all .4s;
-    border-radius: 2px;
-    background-color: #424242;
-}
-
-
+/* 日本語英語 */
 .l-header__language {
+    font-size: 13px;
     top: 0;
     bottom: 0;
     left: 16px;
@@ -75,7 +30,6 @@
     height: 56px;
     padding: 0;
     border: none;
-    font-size: 1.3rem;
     position: absolute;
     display: flex;
     text-align: center;
@@ -97,13 +51,83 @@ margin: 0 10px;
     color: #212121;
 }
 
-.l-header__logo {
+.l-header__block {
     position: static;
-    top: 0;
-    margin: 0;
-    padding: 9px 0;
-    border-bottom: 1px solid #e5e5e5;
+    height: auto;
+    min-height: 0;
+    padding: 0;
 }
+
+
+/* 開く前のナビボタン */
+.l-header__nav {
+    font-size: 16px;
+    position: static;
+    height: auto;
+    min-height: 0;
+    padding: 0;
+    top: 20px;
+    right: 16px;
+    position: absolute;
+    }
+
+
+.l-header__nav a {
+    width: 20px;
+    height: 14px;
+    position: relative;
+    display: inline-block;
+    box-sizing: border-box;
+    transition: all .4s;
+}
+
+.l-header__nav > a::before {
+    top: 0;
+    content: '';
+    overflow: hidden;
+    height: 0;
+    padding-top: 1px;
+    position: absolute;
+    left: 0;
+    display: inline-block;
+    box-sizing: border-box;
+    width: 100%;
+    transition: all .4s;
+    border-radius: 2px;
+    background-color: #424242;
+}
+
+.l-header__nav  a > span {
+    top: 6px;
+    overflow: hidden;
+    height: 0;
+    padding-top: 1px;
+    position: absolute;
+    left: 0;
+    display: inline-block;
+    box-sizing: border-box;
+    width: 100%;
+    transition: all .4s;
+    border-radius: 2px;
+    background-color: #424242;
+}
+
+.l-header__nav  > a::after {
+    bottom: 0;
+    content: '';
+    overflow: hidden;
+    height: 0;
+    padding-top: 1px;
+    position: absolute;
+    left: 0;
+    display: inline-block;
+    box-sizing: border-box;
+    width: 100%;
+    transition: all .4s;
+    border-radius: 2px;
+    background-color: #424242;
+}
+
 
 .l-header__logo {
     position: static;
@@ -111,7 +135,71 @@ margin: 0 10px;
     margin: 0;
     padding: 9px 0;
     border-bottom: 1px solid #e5e5e5;
+    transition: all .3s;
+}
+
+.l-header__logo  a {
+    display: block;
+    overflow: hidden;
+    width: 39px;
+    height: 0;
+    margin: 0 auto;
+    padding-top: 37px;
+    background-image: url();
+    background-position: 0 -523px;
     background-size: 151px 729px;
 }
 
+/* 開いた後のナビボタン */
+.l-header__block--open{
+    margin-top: 0;
+    position: static;
+    height: auto;
+    min-height: 0;
+    padding: 0;
 }
+
+
+.l-header__navMenu {
+    position: static;
+    min-width: 0;
+    padding: 0 15px;
+    transform: none;
+    animation: none;
+}
+
+.l-header__navMenu--main li {
+    margin-bottom: 0;
+    border-bottom: 1px solid #f6f6f6;
+}
+
+.l-header__navMenu--main a {
+    font-size: 16px;
+    position: relative;
+    display: block;
+    padding: 20px 15px;
+
+}
+.l-header__navMenu--main a::after {
+    position: absolute;
+    border: #212121;
+    top: 50%;
+    right: 15px;
+    display: block;
+    overflow: hidden;
+    width: 20px;
+    height: 0;
+    margin-top: -3px;
+    padding-top: 7px;
+    content: '';
+    background-image: url(/assets/images/right-arrow.png);
+    background-position: 0 -229px;
+    background-size: 151px 729px;
+
+}
+
+
+
+}
+
+
