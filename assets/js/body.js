@@ -3,7 +3,6 @@ export function initBody() {
     const navMenuItems = [
         { title: "トップページ", link: "#"},
         { title: "お知らせとご案内", link: "#"},
-        { title: "STORE/ONLINE", link: "#"},
         { title: "薫玉堂について", link: "#"},
         { title: "香りについて", link: "#"},
         { title: "会社概要",  link: "#"},
@@ -15,7 +14,7 @@ export function initBody() {
         const navContainer = document.querySelector('.l-header__navMenu--main');
         navMenuItems.forEach(item => {
             const listItem = document.createElement('li');
-            listItem.classList.add('navMenu--main--item');
+            listItem.classList.add('navMenu--mainItem');
 
             const anchor = document.createElement('a');
             anchor.href = item.link;
@@ -28,4 +27,5 @@ export function initBody() {
     document.addEventListener('DOMContentLoaded', () => {
         generateMainNav();
     });
+
 }
