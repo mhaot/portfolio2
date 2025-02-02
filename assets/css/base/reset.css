@@ -26,7 +26,7 @@ ul, ol {
 body {
     min-height: 100vh;
     line-height: 1.4;
-    font-size: 13px; /* 基本のフォントサイズを指定 */
+    font-size: 14px; /* 基本のフォントサイズを指定 */
 }
 
 h1, h2, h3, h4, button, input, label {
