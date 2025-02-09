@@ -24,8 +24,20 @@ export function initBody() {
             navContainer.appendChild(listItem);
         });
     }
+
     document.addEventListener('DOMContentLoaded', () => {
         generateMainNav();
     });
+
+    // l-header__navMenu--open&close
+    const navBtn = document.querySelector('#js-navBtn');
+    const navMenu = document.querySelector('#js-navMenu');
+
+    navBtn.addEventListener('click', function () {
+
+    navBtn.classList.toggle('active');
+    navMenu.classList.toggle('active');
+
+});
 
 }

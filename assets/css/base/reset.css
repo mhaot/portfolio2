@@ -55,6 +55,7 @@ a {
 img, picture {
     max-width: 100%;
     display: block;
+    vertical-align: top;
 }
 
 input, button, textarea, select {

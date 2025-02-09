@@ -39,7 +39,7 @@
 }
 
 .l-header__language > span {
-margin: 0 10px;
+    margin: 0 10px;
 }
 
 .l-header__language > a {
@@ -130,20 +130,25 @@ margin: 0 10px;
     transition: all .3s;
 }
 
-.l-header__logo  a {
+.l-header__logo a {
     display: block;
-    overflow: hidden;
     width: 39px;
     height: 0;
     margin: 0 auto;
     padding-top: 37px;
-    background-image: url();
-    background-position: 0 -523px;
-    background-size: 151px 729px;
+    background-image: url(/portfolio2/assets/images/icon--zuikoudouBlack.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
+
+.l-header__logo a > img {
+    vertical-align: bottom;
+}
+
 /* 開いた後のナビボタン */
 .l-header__block--open{
-        display: none;
+    display: none;
     margin-top: 0;
     position: static;
     height: auto;
@@ -157,7 +162,27 @@ margin: 0 10px;
     padding: 0 15px;
     transform: none;
     animation: none;
+    transition: ease .5s;
 }
+
+
+/* ハンバーガーメニュークリック後のスタイル */
+.l-header__nav.active > a::before {
+    transform: translateY(6px) rotate(-45deg);
+}
+
+.l-header__nav.active span {
+    opacity: 0;
+}
+
+.l-header__nav.active a::after {
+    transform: translateY(-7px) rotate(45deg);
+}
+
+.l-header__block--open.active {
+    display: block;
+}
+
 
 .l-header__navMenu--main li {
     margin-bottom: 0;
@@ -219,6 +244,7 @@ margin: 0 10px;
     padding: 20px 0 0;
 }
 
+
 .btn--onlineStore {
     font-size: 16px;
     position: relative;
@@ -265,12 +291,11 @@ margin: 0 10px;
     z-index: 1;
     top: 50%;
     transform: translate(-50%, -50%);
-    display: flex;
-    flex-direction: column;
 }
 
 .mainVisual__logo {
     margin-bottom: 45px;
+    width: 75px;
 }
 
 .mainVisual__logoText {
@@ -374,7 +399,6 @@ margin: 0 10px;
     font-size: 16px;
     display: block;
     margin-right: 0;
-    /* vertical-align: middle; */
     color: #9d8856;
 }
 
@@ -392,7 +416,6 @@ margin: 0 10px;
 }
 
 .l-block__more p {
-    /* position: relative;*/
     display: block;
     padding: 15px 0;
     text-align: center;
@@ -439,7 +462,6 @@ margin: 0 10px;
 
 /* l-footer */
 .l-footer {
-    /* position: relative; */
     min-width: 0;
     padding-bottom: 60px;
     background: #f4f4f4;
@@ -466,13 +488,50 @@ margin: 0 10px;
 
 .l-onlineStore__img {
     margin: 0 30px;
+    position: relative;
+    font-size: 12px;
+}
+
+.l-onlineStore__img a > p:before {
+    margin-right: 5px;
+    content: '→';
+}
+
+.l-onlineStore__img a > p {
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    z-index: 1;
+    transform: translate(-50%, -50%);
+    color: #fff;
 }
 
 .l-footer__logo {
     margin: 45px auto 0;
     padding: 35px 0;
-    text-align: center;
     border-top: 1px solid #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.l-footer__logo img {
+    width: 90px;
+}
+
+.l-onlineStore__bnr {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.l-onlineStore__bnr i {
+    position: absolute;
+    top: 25px;
+    right: 22px;
+    display: inline-block;
+    margin: 0;
 }
 
 .btn--topPage {
