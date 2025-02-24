@@ -5,7 +5,7 @@
         margin: 0 auto;
     }
 
-/* l-header */
+    /* l-header */
     .l-header {
         position: fixed;
         z-index: 2;
@@ -29,19 +29,21 @@
     }
 
     .l-header__language {
+        border-top: 1px solid #eee;
+        box-sizing: border-box;
+        height: 125px;
+        min-height: 125px;
+        padding: 45px;
         font-size: 13px;
-        top: 0;
-        bottom: 0;
-        left: 16px;
         width: auto;
-        height: 56px;
-        padding: 0;
-        border: none;
-        position: absolute;
         display: flex;
         text-align: center;
         align-items: center;
         justify-content: center;
+        position: absolute;
+        transform: translateX(-50%);
+        left: 50%;
+        bottom: 0;
     }
 
     .l-header__languageSelect {
@@ -58,21 +60,24 @@
     }
 
     .l-header__block {
-        /* position: static; */
-        height: auto;
-        min-height: 0;
+        position: relative;
         padding: 0;
+        border-bottom: 1px solid #eee;
+        height: 125px;
+        min-height: 125px;
+        padding: 45px;
     }
+
     /* 開く前のナビボタン */
     .l-header__nav {
         font-size: 16px;
-        /* position: static; */
         height: auto;
         min-height: 0;
         padding: 0;
-        top: 20px;
-        right: 16px;
+        /* top: 20px; */
         position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
         }
 
     .l-header__nav a {
@@ -132,12 +137,13 @@
     }
 
     .l-header__logo {
-        /* position: static; */
         top: 0;
         margin: 0;
-        padding: 9px 0;
-        border-bottom: 1px solid #e5e5e5;
         transition: all .3s;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%);
     }
 
     .l-header__logo a {
@@ -160,14 +166,12 @@
     .l-header__block--open{
         display: none;
         margin-top: 0;
-        /* position: static; */
         height: auto;
         min-height: 0;
         padding: 0;
     }
 
     .l-header__navMenu {
-        /* position: static; */
         min-width: 0;
         padding: 0 15px;
         transform: none;
@@ -247,7 +251,6 @@
     }
 
     .l-header__onlineStore {
-        /* position: static; */
         width: auto;
         margin: 0 15px;
         padding: 20px 0 0;
