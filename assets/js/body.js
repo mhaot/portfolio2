@@ -30,15 +30,15 @@ export function initBody() {
     });
 
     // l-header__navMenu--open&close
-    const navBtn = document.querySelector('#js-navBtn');
-    const navMenu = document.querySelector('#js-navMenu');
+//     const navBtn = document.querySelector('#js-navBtn');
+//     const navMenu = document.querySelector('#js-navMenu');
 
-    navBtn.addEventListener('click', function () {
+//     navBtn.addEventListener('click', function () {
 
-    navBtn.classList.toggle('active');
-    navMenu.classList.toggle('active');
+//     navBtn.classList.toggle('active');
+//     navMenu.classList.toggle('active');
 
-});
+// });
 
 // mainVisual__slide
     let currentSlide = 0;
@@ -69,3 +69,22 @@ export function initBody() {
 
     setInterval(changeSlide, 8000);
     updateSlideAndIndicator();}
+
+
+
+
+
+
+    // l-header__navMenu--open&close
+const navBtn = document.querySelector('#js-navBtn');
+const navMenu = document.querySelector('#js-navMenu');
+const header = document.querySelector('.l-header'); // ヘッダーの要素を追加
+
+navBtn.addEventListener('click', function () {
+    // ナビボタンとナビメニューのactiveクラスをトグル
+    navBtn.classList.toggle('active');
+    navMenu.classList.toggle('active');
+
+    // ヘッダーにactiveクラスをトグルして、横幅の変更を反映
+    header.classList.toggle('active');
+});

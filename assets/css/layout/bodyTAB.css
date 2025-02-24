@@ -22,6 +22,7 @@
 
     .l-header__inner {
         width: 100%;
+        height: 100%;
         min-width: 0;
         min-height: 0;
         transition: min-width .3s, min-height .3s;
@@ -147,10 +148,9 @@
 
     .l-header__logo a {
         display: block;
-        width: 39px;
-        height: 0;
+        height: 100px;
+        width: 100px;
         margin: 0 auto;
-        padding-top: 37px;
         background-image: url(../../images/icon--zuikoudouBlack.png);
         background-size: contain;
         background-repeat: no-repeat;
@@ -602,5 +602,60 @@
         width: auto;
         padding: 63px 0 0;
     }
+
+
+
+/* 初期状態のヘッダー */
+.l-header {
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: auto;
+    width: 125px; /* 初期幅 */
+    min-width: 125px;
+    min-height: 600px;
+    transition: min-width .3s, min-height .3s;
+    background: #fff;
+}
+
+/* activeクラスがついた場合に横幅を広げる */
+.l-header.active {
+    width: 300px; /* 開いた後の横幅 */
+    transition: width 0.3s ease-in-out;
+}
+
+
+/* ナビメニューが開いた後のスタイル */
+.l-header__nav.active > a::before {
+    transform: translateY(6px) rotate(-45deg);
+}
+
+.l-header__nav.active span {
+    opacity: 0;
+}
+
+.l-header__nav.active a::after {
+    transform: translateY(-7px) rotate(45deg);
+}
+
+/* ナビメニュー開いた後のヘッダー内の要素を横並びに */
+.l-header__inner.active {
+    display: flex;
+    flex-direction: row; /* 横並び */
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; /* 横幅調整 */
+    position: relative;
+}
+
+
+
+
+
+
+
+
 }
 
