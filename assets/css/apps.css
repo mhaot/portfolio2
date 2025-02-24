@@ -1,7 +1,10 @@
 /* base*/
 @import './base/reset.css';
 @import './base/base.css';
-@import './layout/body.css';
+@import './layout/bodySP.css';
+@import './layout/bodyTAB.css';
+@import './layout/bodyPC.css';
+
 
 
 /* components */

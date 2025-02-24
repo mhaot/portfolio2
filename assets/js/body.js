@@ -40,4 +40,32 @@ export function initBody() {
 
 });
 
-}
+// mainVisual__slide
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slideImg--item');
+    const indicators = document.querySelectorAll('.slideIndicator--item');
+    const totalSlides = slides.length;
+
+    function updateSlideAndIndicator() {
+    slides.forEach((slide, index) => {
+        slide.style.opacity = index === currentSlide ? 1 : 0; //currentSlideのときopacityを1、他は0に
+    });
+
+    indicators.forEach((indicator, index) => {
+        indicator.classList.remove('active', 'inactive');
+
+        if (index === currentSlide) {
+        indicator.classList.add('active');
+        } else {
+        indicator.classList.add('inactive');
+        }
+    });
+    }
+
+    function changeSlide() {
+    currentSlide = (currentSlide + 1) % totalSlides;
+    updateSlideAndIndicator();
+    }
+
+    setInterval(changeSlide, 8000);
+    updateSlideAndIndicator();}
