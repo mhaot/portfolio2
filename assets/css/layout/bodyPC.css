@@ -603,6 +603,68 @@
         padding: 63px 0 0;
     }
 
+
+    /* 初期状態のヘッダー */
+.l-header {
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: auto;
+    width: 125px; /* 初期幅 */
+    min-width: 125px;
+    min-height: 600px;
+    transition: min-width .3s, min-height .3s;
+    background: #fff;
+}
+
+/* activeクラスがついた場合に横幅を広げる */
+.l-header.active {
+    min-width: 400px; /* 開いた後の横幅 */
+    transition: width 0.3s ease-in-out;
+}
+
+
+/* ナビメニューが開いた後のスタイル */
+.l-header__nav.active > a::before {
+    transform: translateY(6px) rotate(-45deg);
+}
+
+.l-header__nav.active span {
+    opacity: 0;
+}
+
+.l-header__nav.active a::after {
+    transform: translateY(-7px) rotate(45deg);
+}
+
+/* ナビメニュー開いた後のヘッダー内の要素を横並びに */
+.l-header.active >.l-header__inner{
+    /* display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: relative; */
+    width: 125px;
+    position: absolute;
+    left: 0;
+}
+
+.l-header__block--open.active {
+    /* display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: relative; */
+    position: absolute;
+    right: 0;
+    top: 30%;
+
+}
+
 }
 
 

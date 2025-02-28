@@ -622,7 +622,7 @@
 
 /* activeクラスがついた場合に横幅を広げる */
 .l-header.active {
-    width: 300px; /* 開いた後の横幅 */
+    min-width: 400px; /* 開いた後の横幅 */
     transition: width 0.3s ease-in-out;
 }
 
@@ -641,20 +641,30 @@
 }
 
 /* ナビメニュー開いた後のヘッダー内の要素を横並びに */
-.l-header__inner.active {
-    display: flex;
-    flex-direction: row; /* 横並び */
+.l-header.active >.l-header__inner{
+    /* display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    width: 100%; /* 横幅調整 */
-    position: relative;
+    width: 100%;
+    position: relative; */
+    width: 125px;
+    position: absolute;
+    left: 0;
 }
 
+.l-header__block--open.active {
+    /* display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: relative; */
+    position: absolute;
+    right: 0;
+    top: 30%;
 
-
-
-
-
+}
 
 
 }
