@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>portfolio2</title>
     <link rel="stylesheet" href="assets/css/apps.css"></head>
-<body>
+<body id="top">
     <header class="l-header">
         <div class="l-header__inner">
             <div class="l-header__block">
@@ -16,9 +16,9 @@
                 </btn>
             </div>
             <div class="l-header__flex--pc">
-                <div class="l-header__logo">
+                <h1 class="l-header__logo">
                     <a href="#"></a>
-                </div>
+                </h1>
                 <div class="l-header__block--open" id="js-navMenu">
                     <nav class="l-header__navMenu">
                         <ul class="l-header__navMenu--main"></ul>
@@ -48,19 +48,19 @@
                     </p>
                 </div>
             </div>
-<div class="l-header__languageWrap">
-            <div class="l-header__language">
-                <p class="l-header__languageSelect">JA</p>
-                <span>/</span>
-                <a href="#">EN</a>
+            <div class="l-header__languageWrap">
+                <div class="l-header__language">
+                    <p class="l-header__languageSelect">JA</p>
+                    <span>/</span>
+                    <a href="#">EN</a>
+                </div>
+                <p class="l-header__onlineStore--pc">
+                    <a class="btn--onlineStore" href="#">
+                        オンラインストア
+                    <i class="icon--arrowRightWhite">→</i>
+                    </a>
+                </p>
             </div>
-            <p class="l-header__onlineStore--pc">
-                <a class="btn--onlineStore" href="#">
-                    オンラインストア
-                <i class="icon--arrowRightWhite">→</i>
-                </a>
-            </p>
-</div>
         </div>
     </header>
     <div class="l-container">
@@ -84,7 +84,7 @@
                         </ul>
                     </picture>
                     <div class="mainVisual__btn" role="button">
-                        <a href="#bottom" class="btn--nextPage">↓</a>
+                        <a href="#firstContent" class="btn--nextPage">↓</a>
                     </div>
                     <nav class="slideIndicator">
                         <ul class="slideIndicator--list">
@@ -97,7 +97,7 @@
                     </nav>
                 </div>
             </section>
-            <section class="l-block">
+            <section class="l-block" id="firstContent">
                 <div class="l-block__inner">
                     <header class="l-block__header">
                         <h2 class="block__title">
@@ -212,9 +212,9 @@
                     </div>
             </section>
         </main>
-    <footer class="l-footer" id="#bottom">
+    <footer class="l-footer">
             <div class="l-footer__top" role="button">
-                <a href="#" class="btn--topPage">↑</a>
+                <a href="#top" class="btn--topPage">↑</a>
             </div>
             <div class="l-footer__bottom">
                 <div class="l-footer__flex--pc">

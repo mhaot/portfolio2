@@ -1,5 +1,9 @@
 /* @media (max-width: 767px) { }*/
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* l-header */
 .l-header {
     position: fixed;
@@ -8,13 +12,13 @@
     float: none;
     width: 100%;
     background: #fff;
+
 }
 
 .l-header__inner {
     width: 100%;
     min-width: 0;
     min-height: 0;
-    transition: min-width .3s, min-height .3s;
     background: #fff;
 }
 
@@ -174,6 +178,19 @@
 
 .l-header__block--open.active {
     display: block;
+    animation: openMenuAnimation .5s ease-in 0s normal none running;
+}
+
+@keyframes openMenuAnimation {
+    0% {
+        opacity: 0;
+        -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)'
+    }
+
+    to {
+        opacity: 1;
+        -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=100)'
+    }
 }
 
 .l-header__navMenu--main li {
@@ -265,7 +282,6 @@
 /* l-main */
 /* mainVisual */
 .l-mainVisual {
-    margin-top: -52px;
     position: relative;
     overflow: hidden;
     width: 100%;
@@ -331,7 +347,7 @@
     opacity: 1;
     position: relative;
     width: 100%;
-    height: 745px;
+    height: 100vh;
     overflow: hidden;
 }
 
@@ -519,6 +535,7 @@
     position: fixed;
     bottom: 0;
     width: 100%;
+    display: none;
 }
 
 .l-onlineStore__bnr i {
@@ -583,8 +600,8 @@
         bottom: 0;
         left: auto;
         width: 125px;
-        transition: min-width .3s, min-height .3s;
         background: #fff;
+        transition: width 0.5s cubic-bezier(0.25, 1, 0.5, 1);
     }
 
     .l-header__navMenu--pc {
@@ -604,8 +621,7 @@
     }
 
     .l-header.active {
-        min-width: 400px;
-        transition: width 0.3s ease-in-out;
+        width: 400px;
     }
 
     .l-header__nav.active > a::before {
@@ -624,7 +640,6 @@
         border-top: 1px solid #eee;
         box-sizing: border-box;
         height: 125px;
-        /* width: 125px; */
         padding: 45px;
         position: static;
     }
@@ -647,6 +662,10 @@
         position: static;
     }
 
+    .l-header__nav a {
+        width: 30px;
+    }
+
     .l-header__logo {
         transition: all .3s;
         position: static;
@@ -666,63 +685,6 @@
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
-    }
-
-    /* l-main */
-    /* mainVisual */
-
-    .l-mainVisual {
-        height: 100vh;
-    }
-
-    .mainVisual__slide {
-        height: 100%;
-    }
-
-    @keyframes progress {
-        0% { width: 0%; }
-        100% { width: 100%; }
-    }
-
-    .slideIndicator--list {
-        position: absolute;
-        bottom: 20px;
-        left: 50%;
-        transform: translateX(-50%);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 50%;
-    }
-
-    .slideIndicator--item {
-        width: 60px;
-        height: 2px;
-        margin: 0 5px;
-        position: relative;
-        background: rgba(255, 255, 255, 0.15);
-        transition: opacity 2s ease-in-out;/* 次のスライドの切り替わる時間 */
-        overflow: hidden;
-    }
-
-    .slideIndicator--item::before {
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 0;
-        height: 100%;
-        width: 0%;
-        background: #fff;
-        transition: none;
-    }
-
-    .slideIndicator--item.active::before {
-        animation: progress 4s linear forwards;
-    }
-
-    .slideIndicator--item.inactive::before {
-        width: 0%;
-        opacity: 0;
     }
 
     .l-header__onlineStore--pc  {
@@ -794,6 +756,79 @@
         justify-content: space-between;
         align-items: center;
     }
+
+    /* l-main */
+    /* mainVisual */
+
+    .l-mainVisual {
+        height: 100vh;
+    }
+
+    .mainVisual__slide {
+        height: 100vh;
+    }
+
+    @keyframes progress {
+        0% { width: 0%; }
+        100% { width: 100%; }
+    }
+
+    .slideIndicator--list {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50%;
+    }
+
+    .slideIndicator--item {
+        width: 60px;
+        height: 2px;
+        margin: 0 5px;
+        position: relative;
+        background: rgba(255, 255, 255, 0.15);
+        transition: opacity 2s ease-in-out;/* 次のスライドの切り替わる時間 */
+        overflow: hidden;
+    }
+
+    .slideIndicator--item::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 0%;
+        background: #fff;
+        transition: none;
+    }
+
+    .slideIndicator--item.active::before {
+        animation: progress 4s linear forwards;
+    }
+
+    .slideIndicator--item.inactive::before {
+        width: 0%;
+        opacity: 0;
+    }
+    .mainVisual__logo {
+        display: none;
+    }
+
+    .mainVisual__logoText > li:first-child {
+        font-size: 18px;
+    }
+
+    .mainVisual__logoText > li:nth-child(2n) {
+        font-size: 13px;
+    }
+
+    .mainVisual__logoText span {
+        font-size: 30px;
+    }
+
 
     .mainVisual__title, .mainVisual__btn {
         left: 75px;
@@ -869,8 +904,6 @@
     .l-footer__nav {
         margin: 0;
         color: #212121;
-        /* float: left; */
-        /* margin-right: 130px; */
     }
 
     .l-onlineStore__img {
@@ -915,5 +948,10 @@
         left: 20%;
     }
 
+    .btn--topPage {
+        top: -40px;
+        width: 74px;
+        height: 74px;
+    }
 
 }
