@@ -130,20 +130,10 @@ html {
     transition: all .3s;
 }
 
-.l-header__logo a {
+.l-header__logo img {
     display: block;
     width: 39px;
-    height: 0;
     margin: 0 auto;
-    padding-top: 37px;
-    background-image: url(../../images/icon--zuikoudouBlack.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.l-header__logo a > img {
-    vertical-align: bottom;
 }
 
 /* 開いた後のナビボタン */
@@ -675,16 +665,11 @@ html {
         width: 125px;
     }
 
-    .l-header__logo a {
-        padding: 0;
+    .l-header__logo img {
         display: block;
         height: 100px;
         width: 100px;
         margin: 0 auto;
-        background-image: url(../../images/icon--zuikoudouBlack.png);
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
     }
 
     .l-header__onlineStore--pc  {
