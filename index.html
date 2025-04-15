@@ -5,38 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>portfolio2</title>
     <link rel="stylesheet" href="assets/css/apps.css"></head>
-<body id="top">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <body id="top">
     <header class="l-header">
         <div class="l-header__inner">
             <div class="l-header__block">
-                <btn class="l-header__nav" id="js-navBtn">
+                <button class="l-header__nav" id="js-navBtn">
                     <a href="#">
                         <span></span>
                     </a>
-                </btn>
+                </button>
             </div>
             <div class="l-header__flex--pc">
                 <h1 class="l-header__logo">
                     <a href="#"><img src="assets/images/icon--zuikoudouBlack.png" alt="瑞香堂ロゴ"></a>
                 </h1>
                 <div class="l-header__block--open" id="js-navMenu">
-                    <nav class="l-header__navMenu">
+                    <nav class="l-header__navMenu" aria-label="メインナビゲーション">
                         <ul class="l-header__navMenu--main"></ul>
                         <ul class="l-header__navMenu--sub">
                             <li class="navMenu--subItem">
                                 <a href="#">
-                                    <img class="icon--facebook" src="assets/images/icon--facebook.png">
+                                    <img class="icon--facebook" src="assets/images/icon--facebook.png" alt="Facebookのアイコン">
                                     <span>facebook</span>
                                 </a>
                             </li>
                             <li class="navMenu--subItem">
                                 <a href="#">
-                                    <img  class="icon--instagram" src="assets/images/icon--instagram.png">
+                                    <img  class="icon--instagram" src="assets/images/icon--instagram.png" alt="instagramのアイコン">
                                     <span>instagram</span>
                                 </a>
                             </li>
                         </ul>
-                    <nav>
+                    </nav>
                     <p class="l-header__onlineStore">
                         <a class="btn--onlineStore" href="#">
                             オンラインストア
@@ -68,22 +69,22 @@
             <section class="l-mainVisual">
                 <div class="mainVisual__slide">
                     <h2 class="mainVisual__title">
-                        <img class="mainVisual__logo" src="assets/images/icon--zuikoudouWhite.png">
+                        <img class="mainVisual__logo" src="assets/images/icon--zuikoudouWhite.png" alt="瑞香堂ロゴ">
                         <ul class="mainVisual__logoText">
                             <li>香老舗<span>瑞香堂</span></li>
                             <li>創業元禄三年</li>
                         </ul>
                     </h2>
-                    <picture class="slideImg">
+                    <div class="slideImg">
                         <ul class="slideImg--list">
-                            <li class="slideImg--item"><img src="assets/images/img--slide01.jpg" alt=""></li>
-                            <li class="slideImg--item"><img src="assets/images/img--slide02.jpg" alt=""></li>
-                            <li class="slideImg--item"><img src="assets/images/img--slide03.jpg" alt=""></li>
-                            <li class="slideImg--item"><img src="assets/images/img--slide04.jpg" alt=""></li>
-                            <li class="slideImg--item"><img src="assets/images/img--slide05.jpg" alt=""></li>
+                            <li class="slideImg--item"><img src="assets/images/img--slide01.jpg" alt="インセンスコーン"></li>
+                            <li class="slideImg--item"><img src="assets/images/img--slide02.jpg" alt="香炉"></li>
+                            <li class="slideImg--item"><img src="assets/images/img--slide03.jpg" alt="香鉢"></li>
+                            <li class="slideImg--item"><img src="assets/images/img--slide04.jpg" alt="中国古代天井"></li>
+                            <li class="slideImg--item"><img src="assets/images/img--slide05.jpg" alt="インセンススティック"></li>
                         </ul>
-                    </picture>
-                    <div class="mainVisual__btn" role="button">
+                    </div>
+                    <div class="mainVisual__btn">
                         <a href="#firstContent" class="btn--nextPage">↓</a>
                     </div>
                     <nav class="slideIndicator">
@@ -146,9 +147,10 @@
                             <a class="btn--more" href="#">催事のご案内<i class="icon--arrowRight">→</i></a>
                         </p>
                     </div>
+                </div>
             </section>
             <section class="l-block">
-                <figure class="l-block__hero"><img src="assets/images/hero--block02.jpg"></figure>
+                <figure class="l-block__hero"><img src="assets/images/hero--block02.jpg" alt="香鉢とインセンススティック"></figure>
                 <div class="l-block__inner">
                     <div class="l-block__header">
                         <h2 class="block__title">
@@ -167,9 +169,10 @@
                             <a class="btn--more" href="#">もっと見る<i class="icon--arrowRight">→</i></a>
                         </p>
                     </div>
+                </div>
             </section>
             <section class="l-block">
-                <figure class="l-block__hero"><img src="assets/images/hero--block03.jpg"></figure>
+                <figure class="l-block__hero"><img src="assets/images/hero--block03.jpg" alt="仏堂"></figure>
                 <div class="l-block__inner">
                     <div class="l-block__header">
                         <h2 class="block__title">
@@ -188,9 +191,10 @@
                             <a class="btn--more" href="#">もっと見る<i class="icon--arrowRight">→</i></a>
                         </p>
                     </div>
+                </div>
             </section>
             <section class="l-block">
-                <figure class="l-block__hero"><img src="assets/images/hero--block04.jpg"></figure>
+                <figure class="l-block__hero"><img src="assets/images/hero--block04.jpg" alt="お香立て"></figure>
                 <div class="l-block__inner">
                     <div class="l-block__header">
                         <h2 class="block__title">
@@ -210,6 +214,7 @@
                             <a class="btn--more" href="#">もっと見る<i class="icon--arrowRight">→</i></a>
                         </p>
                     </div>
+                </div>
             </section>
         </main>
     <footer class="l-footer">
@@ -239,14 +244,14 @@
                         <p>都京市都京区都京通都京願寺前</p>
                         <p>tel : 123-456-7890</p>
                     </address>
-                    <div class="l-footer__logo--pc"><img src="assets/images/icon--zuikoudouBlack.png"></div>
+                    <div class="l-footer__logo--pc"><img src="assets/images/icon--zuikoudouBlack.png" alt="フッターロゴPC"></div>
                 </div>
                 <div class="l-onlineStore__img">
-                    <a href="#"><img src="assets/images/img--onlineStore.jpg">
+                    <a href="#"><img src="assets/images/img--onlineStore.jpg" alt="オンラインストアリンク">
                         <p>オンラインストア</p>
                     </a>
                 </div>
-                <div class="l-footer__logo--sp"><img src="assets/images/icon--zuikoudouBlack.png"></div>
+                <div class="l-footer__logo--sp"><img src="assets/images/icon--zuikoudouBlack.png" alt="フッターロゴモバイル"></div>
             </div>
     </footer>
     <p class="l-onlineStore__bnr">

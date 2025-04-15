@@ -38,6 +38,7 @@ html {
 }
 
 .l-header__languageSelect {
+    cursor: pointer;
     color: #757575;
 }
 
@@ -169,6 +170,7 @@ html {
 .l-header__block--open.active {
     display: block;
     animation: openMenuAnimation .5s ease-in 0s normal none running;
+    height: 100vh;
 }
 
 @keyframes openMenuAnimation {
@@ -443,7 +445,7 @@ html {
 }
 
 .newsMenu--item > a:hover {
-    background: #f4f4f4;
+    background: #fafafa;
     opacity: 0.8;
 }
 
@@ -831,7 +833,7 @@ html {
     }
 
     .l-block__header {
-        padding: 180px 40px 55px;
+        padding: 180px 0 55px;
     }
 
     .block__title {
