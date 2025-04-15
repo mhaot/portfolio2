@@ -442,15 +442,18 @@ html {
     line-height: 1.5;
     display: block;
     color: #000000;
+    transition: all 1s ease-out;
 }
 
 .newsMenu--item > a:hover {
     background: #fafafa;
     opacity: 0.8;
+    transition: all 1s ease-out;
 }
 
 .newsMenu--title:hover {
     color: #9d8856;
+    transition: all 1s ease-out;
 }
 
 .newsMenu--date {
