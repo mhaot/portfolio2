@@ -651,6 +651,9 @@ html {
         align-items: center;
     }
 
+    .l-header__block--open.active {
+        height: auto;
+}
 
     /* 開く前のナビボタン */
     .l-header__nav {
