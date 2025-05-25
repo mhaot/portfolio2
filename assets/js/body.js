@@ -3,7 +3,7 @@ export function initBody() {
     const navMenuItems = [
         { title: "トップページ", link: "#"},
         { title: "お知らせとご案内", link: "#"},
-        { title: "薫玉堂について", link: "#"},
+        { title: "瑞香堂について", link: "#"},
         { title: "香りについて", link: "#"},
         { title: "会社概要",  link: "#"},
         { title: "お問い合わせ", link: "#"},
